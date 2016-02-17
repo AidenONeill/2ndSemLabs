@@ -1,6 +1,6 @@
 package Lab1;
 import java.util.*;
-
+//simple program to determine probability of of creating a triangle 
 public class Sticks {
 
 	public static void main(String[] args) {
