@@ -11,18 +11,14 @@ public class Compression {
 		int ar[] = new int[256];		
 		int ascii;
 
-		for (int j = 0; j < ar.length; j++) {
 
-			for (int i = 0; i < one.length(); i++) {
-				char c = one.charAt(i);				
-				ascii = (int)c;
-				if(ascii == j)
-				{	
-					ar[j]++;
 
-				}
-			}			
-		}
+		for (int i = 0; i < one.length(); i++) 
+		{
+
+			ar[(int)one.charAt(i)]++;
+		}			
+
 		for (int i = 0; i < ar.length; i++) 
 		{
 			if(ar[i]>0)
