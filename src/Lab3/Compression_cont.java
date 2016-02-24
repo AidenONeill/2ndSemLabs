@@ -59,22 +59,24 @@ public class Compression_cont {
 
 		while(PQ.size()>1)//while there are two or more Trees left in the forest
 		{       
-			Tree t1 = PQ.remove();
-			Tree t2 = PQ.remove();
-			Tree a = new Tree(t1,t2);			
+			Tree t1 = PQ.remove();//remove first element in queue, set as t1
+			Tree t2 = PQ.remove();//remove second element in qeueu, set as t2
+						
 			//System.out.println("Tree 1 " + t1.root.letter+" T1: Freq "+ t1.frequency+"   |  "+" Tree 2 "+t2.root.letter+ " T2: Freq "+ t2.frequency+"  |  "+" Total Freq "+ a.frequency);
-			PQ.add(a);
+			
+			
+			PQ.add(new Tree(t1,t2));//make a new tree taking in both removed trees and add it back to the PQ
 		}
 
 		Tree HuffmanTree = PQ.poll();//now there's only one tree left - get its codes
 		double n1 = 0;//set a double to find compression %
 		for (int i = 0; i < one.length(); i++) 
 		{
-			System.out.print(HuffmanTree.getCode(one.charAt(i))+ " ");
-			n1 = n1+HuffmanTree.path.length();
+			System.out.print(HuffmanTree.getCode(one.charAt(i))+ " ");//get huffman codes for every letter in the initial String
+			n1 = n1+HuffmanTree.path.length();//get current bit size for compressed string
 		}
 		System.out.println();
-		System.out.print("Compressed size is "+ n1+ " bits / "+total+ " bits = ");
+		System.out.print("Compressed size is "+ n1 + " bits / "+ total + " bits = ");
 		double d= n1/total*100;
 		System.out.printf("%.2f",d);
 		System.out.print("%");
