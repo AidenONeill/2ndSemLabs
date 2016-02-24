@@ -9,14 +9,14 @@ public class Compression {
 		String two = scan.nextLine();
 		String one = two.toLowerCase();
 		int ar[] = new int[256];		
-		int ascii;
+		
 
 
 
 		for (int i = 0; i < one.length(); i++) 
 		{
 
-			ar[(int)one.charAt(i)]++;
+			ar[(int)one.charAt(i)]++; //increment the array value if index is the ascii number for a char found
 		}			
 
 		for (int i = 0; i < ar.length; i++) 
