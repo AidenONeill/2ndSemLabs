@@ -77,8 +77,7 @@ public class Compression_cont {
 		}
 		System.out.println();
 		System.out.print("Compressed size is "+ n1 + " bits / "+ total + " bits = ");
-		double d= n1/total*100;
-		System.out.printf("%.2f",d);
+		System.out.printf("%.2f",n1/total*100);
 		System.out.print("%");
 
 
