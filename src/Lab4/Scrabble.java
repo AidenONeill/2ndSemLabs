@@ -20,14 +20,11 @@ public class Scrabble
 		int count2= 0, a=0;					   //declare count and a variable a for later use
 		scan.close();
 
-
-
 		mergeSort2(ar);	//calls a merge sort on the array of strings - sorted buy string length descending			
-
 
 		for (int i = 0; i < ar.length; i++) //run though the array of strings
 		{		 
-			two = ar[i];//string two is the current string being looked at in ar
+			two = ar[i];//string two is the current string being looked at in array
 			three = two;//set a string to the value of two, as two will be changed during comparison
 			s3 = one;	//same as string three
 			
@@ -83,8 +80,7 @@ public class Scrabble
 			{
 				System.out.println(found[x]);
 			}
-		}
-		
+		}		
 	}
 	public static void mergeSort2(String[] ar) 
 	{
